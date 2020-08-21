@@ -1,0 +1,131 @@
+$dominant-color: #201728;
+$light-purple-color: #6F249B;
+$darker-purple-color: #5E2083;
+$main-font: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $main-font;
+}
+
+body {
+	color: white;
+}
+
+header section {
+	background-image: url('../img/hearo-top.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+		height: 100vh;
+		width: 100vw;
+	overflow: hidden;
+}
+
+main {
+	@mixin card($image) {
+		background-image: $image;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		margin: 0.5rem 1rem;
+		
+		header {
+			margin-left: 1rem;
+		}
+
+		main {
+			margin-left: 1.5rem;
+		}
+
+		footer {
+			position: relative;
+			bottom: 0;
+			background: transparent;
+			padding: 0;
+			margin-top: 1rem;
+			margin-left: auto;
+			margin-right: 1rem;
+		}
+	}
+
+	.bg-lightPurple {
+		background-color: $light-purple-color;
+		overflow: hidden;
+		height: 100vh;
+		width: 100%;
+
+		header {
+			font-size: 64px;
+			padding: 1rem;
+			margin-top: 1rem;
+		}
+
+		p {
+			z-index: 10000;
+			margin: 1rem;
+			padding: 1rem;
+			letter-spacing: .2rem;
+		}
+
+		.main-img {
+			position: relative;
+			height: 256px;
+			width: 100%;
+			transform: translate(0, -100%);
+		}
+
+		.circle-img {
+			height: 248px;
+			width: 264px;
+			transform: translate(60%, -150%);
+		}
+
+	}
+
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background: white cover no-repeat;
+
+	}
+
+	.square {
+		@include card (url('../img//bg-square-gradient.png'));
+	}
+
+	.rectangle {
+		@include card (url('../img//bg-rectangle-gradient.png'));
+	}
+
+	.circle {
+		@include card (url('../img//bg-circle-gradient.png'));
+	}
+
+}
+
+	
+
+
+footer {
+	font-family: $main-font;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	padding: 3rem;
+	background: $dominant-color;
+
+	div {
+		padding: 1rem;
+	}
+}
