@@ -17,17 +17,167 @@ body {
 	color: white;
 }
 
-header section {
-	background-image: url('../img/hearo-top.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+header {
+	section {
+		background-image: url('../img/hearo-top.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
 		height: 100vh;
 		width: 100vw;
-	overflow: hidden;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+			.logo {
+				position: absolute;
+				padding: 2rem;
+				top: 40%;
+			}
+
+			.arrow-down {
+				padding: 1rem;
+				position: absolute;
+				bottom: 5%;
+				transition: all 0.7s ease;
+
+				&:hover {
+					bottom: 8%;
+				}
+			}
+	}
 }
 
 main {
+
+	@mixin sub-section{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		background-color: $light-purple-color;
+		overflow: hidden;
+		height: auto;
+		width: 100%;
+
+
+		header {
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 48px;
+			padding: 1rem;
+			margin-top: 1rem;
+			margin-left: 1rem;
+		}
+
+		.button {
+			position: relative;
+			width: 175px;
+			height: 50px;
+			border: solid 2px #B21A4E;
+			background: transparent;
+			color: white;
+			text-transform: uppercase;
+
+			.arrow-btn-right {
+				position: absolute;
+				right: -15%;
+				top: 30%;
+			}
+		}
+
+		p {
+			z-index: 10000;
+			margin: 1rem;
+			padding: 1rem;
+			padding-top: 3rem;
+			letter-spacing: .2rem;
+		}
+
+
+		.main-img {
+			height: 256px;
+			width: 100%;
+			box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+		}
+	}
+
+	.sub-1 {
+		@include sub-section();
+		background-color: $dominant-color;
+		
+		header {
+			.waves {
+				bottom: -50%;
+				left: 4.5%;
+			}
+		}
+
+		.hex-img {
+			position: absolute;
+			height: 248px;
+			width: 264px;
+			left: 35%;
+			top: 20%;
+		}
+
+		.button {
+			margin-left: 2rem;
+			margin: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		div {
+			position: relative;
+			padding: 2rem;
+			margin-bottom: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			.arrow-image {
+				margin-top: 3rem;
+			}
+		}
+	}
+
+	.sub-2 {
+		@include sub-section();
+
+		.circle-img {
+			position: absolute;
+			height: 248px;
+			width: 264px;
+			left: -20%;
+			top: 0;
+		}
+
+		.button {
+			margin-left: 2rem;
+			margin: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		div {
+			position: relative;
+			padding: 2rem;
+			margin-bottom: 2rem;
+
+			.arrow-img-2 {
+				position: absolute;
+				height: 127px;
+				width: 31px;
+				bottom: -5%;
+				right: 10%;
+			}
+	
+		}
+		
+
+	}
+
 	@mixin card($image) {
 		background-image: $image;
 		background-size: cover;
@@ -37,13 +187,16 @@ main {
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 		margin: 0.5rem 1rem;
+		box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 		
 		header {
 			margin-left: 1rem;
 		}
 
 		main {
+			margin-top: 3rem;
 			margin-left: 1.5rem;
+			height: 192px;
 		}
 
 		footer {
@@ -51,44 +204,11 @@ main {
 			bottom: 0;
 			background: transparent;
 			padding: 0;
-			margin-top: 1rem;
+			margin-top: auto;
 			margin-left: auto;
 			margin-right: 1rem;
+			width: fit-content;
 		}
-	}
-
-	.bg-lightPurple {
-		background-color: $light-purple-color;
-		overflow: hidden;
-		height: 100vh;
-		width: 100%;
-
-		header {
-			font-size: 64px;
-			padding: 1rem;
-			margin-top: 1rem;
-		}
-
-		p {
-			z-index: 10000;
-			margin: 1rem;
-			padding: 1rem;
-			letter-spacing: .2rem;
-		}
-
-		.main-img {
-			position: relative;
-			height: 256px;
-			width: 100%;
-			transform: translate(0, -100%);
-		}
-
-		.circle-img {
-			height: 248px;
-			width: 264px;
-			transform: translate(60%, -150%);
-		}
-
 	}
 
 	.cards {
@@ -96,6 +216,8 @@ main {
 		flex-wrap: wrap;
 		flex-direction: column;
 		background: white cover no-repeat;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 
 	}
 

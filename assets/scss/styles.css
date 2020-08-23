@@ -21,41 +21,221 @@ header section {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main .bg-lightPurple {
+header section .logo {
+  position: absolute;
+  padding: 2rem;
+  top: 40%;
+}
+
+header section .arrow-down {
+  padding: 1rem;
+  position: absolute;
+  bottom: 5%;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+header section .arrow-down:hover {
+  bottom: 8%;
+}
+
+main .sub-1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #6F249B;
   overflow: hidden;
-  height: 100vh;
+  height: auto;
   width: 100%;
+  background-color: #201728;
 }
 
-main .bg-lightPurple header {
-  font-size: 64px;
+main .sub-1 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 48px;
   padding: 1rem;
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 
-main .bg-lightPurple p {
+main .sub-1 .button {
+  position: relative;
+  width: 175px;
+  height: 50px;
+  border: solid 2px #B21A4E;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .sub-1 .button .arrow-btn-right {
+  position: absolute;
+  right: -15%;
+  top: 30%;
+}
+
+main .sub-1 p {
   z-index: 10000;
   margin: 1rem;
   padding: 1rem;
+  padding-top: 3rem;
   letter-spacing: .2rem;
 }
 
-main .bg-lightPurple .main-img {
-  position: relative;
+main .sub-1 .main-img {
   height: 256px;
   width: 100%;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
-main .bg-lightPurple .circle-img {
+main .sub-1 header .waves {
+  bottom: -50%;
+  left: 4.5%;
+}
+
+main .sub-1 .hex-img {
+  position: absolute;
   height: 248px;
   width: 264px;
-  -webkit-transform: translate(60%, -150%);
-          transform: translate(60%, -150%);
+  left: 35%;
+  top: 20%;
+}
+
+main .sub-1 .button {
+  margin-left: 2rem;
+  margin: 2rem;
+  margin-bottom: 2rem;
+}
+
+main .sub-1 div {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .sub-1 div .arrow-image {
+  margin-top: 3rem;
+}
+
+main .sub-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #6F249B;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+}
+
+main .sub-2 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 48px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+main .sub-2 .button {
+  position: relative;
+  width: 175px;
+  height: 50px;
+  border: solid 2px #B21A4E;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .sub-2 .button .arrow-btn-right {
+  position: absolute;
+  right: -15%;
+  top: 30%;
+}
+
+main .sub-2 p {
+  z-index: 10000;
+  margin: 1rem;
+  padding: 1rem;
+  padding-top: 3rem;
+  letter-spacing: .2rem;
+}
+
+main .sub-2 .main-img {
+  height: 256px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+}
+
+main .sub-2 .circle-img {
+  position: absolute;
+  height: 248px;
+  width: 264px;
+  left: -20%;
+  top: 0;
+}
+
+main .sub-2 .button {
+  margin-left: 2rem;
+  margin: 2rem;
+  margin-bottom: 2rem;
+}
+
+main .sub-2 div {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+main .sub-2 div .arrow-img-2 {
+  position: absolute;
+  height: 127px;
+  width: 31px;
+  bottom: -5%;
+  right: 10%;
 }
 
 main .cards {
@@ -69,6 +249,8 @@ main .cards {
       -ms-flex-direction: column;
           flex-direction: column;
   background: white cover no-repeat;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 main .square {
@@ -80,6 +262,8 @@ main .square {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0.5rem 1rem;
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
 main .square header {
@@ -87,7 +271,9 @@ main .square header {
 }
 
 main .square main {
+  margin-top: 3rem;
   margin-left: 1.5rem;
+  height: 192px;
 }
 
 main .square footer {
@@ -95,9 +281,12 @@ main .square footer {
   bottom: 0;
   background: transparent;
   padding: 0;
-  margin-top: 1rem;
+  margin-top: auto;
   margin-left: auto;
   margin-right: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 main .rectangle {
@@ -109,6 +298,8 @@ main .rectangle {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0.5rem 1rem;
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
 main .rectangle header {
@@ -116,7 +307,9 @@ main .rectangle header {
 }
 
 main .rectangle main {
+  margin-top: 3rem;
   margin-left: 1.5rem;
+  height: 192px;
 }
 
 main .rectangle footer {
@@ -124,9 +317,12 @@ main .rectangle footer {
   bottom: 0;
   background: transparent;
   padding: 0;
-  margin-top: 1rem;
+  margin-top: auto;
   margin-left: auto;
   margin-right: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 main .circle {
@@ -138,6 +334,8 @@ main .circle {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0.5rem 1rem;
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
 main .circle header {
@@ -145,7 +343,9 @@ main .circle header {
 }
 
 main .circle main {
+  margin-top: 3rem;
   margin-left: 1.5rem;
+  height: 192px;
 }
 
 main .circle footer {
@@ -153,9 +353,12 @@ main .circle footer {
   bottom: 0;
   background: transparent;
   padding: 0;
-  margin-top: 1rem;
+  margin-top: auto;
   margin-left: auto;
   margin-right: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 footer {
