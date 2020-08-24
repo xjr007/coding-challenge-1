@@ -5,6 +5,41 @@
   font-family: FairDisplay;
 }
 
+@media (min-width: 801px) {
+  /*Laptop and Desktop*/
+  header section .arrow-nav .arrow-down {
+    bottom: 8% !important;
+    right: 50% !important;
+  }
+  header section .arrow-nav .arrow-down:hover {
+    bottom: 10% !important;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 101% !important;
+  }
+  main #info-box {
+    width: 60% !important;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  main #info-box p {
+    font-size: 48px !important;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
