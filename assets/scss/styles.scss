@@ -1,7 +1,14 @@
 $dominant-color: #201728;
 $light-purple-color: #6F249B;
 $darker-purple-color: #5E2083;
-$main-font: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+$pink-red-color: #B21A4E;
+@font-face {
+	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+	font-family: MontSerrat;
+	src: url('../fonts/Playfair_Display/PlayfairDisplay-Medium.ttf');
+	font-family: FairDisplay;
+}
+
 
 * {
 	padding: 0;
@@ -12,11 +19,15 @@ $main-font: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 }
 
 html {
-	font-family: $main-font;
+	font-family: 'MontSerrat';
 }
 
 body {
 	color: white;
+}
+
+button {
+	font-family: sans-serif;
 }
 
 header {
@@ -89,7 +100,6 @@ header {
 		}
 
 		.arrow-nav {
-			display: none;
 			.arrow-down {
 				position: absolute;
 				bottom: 5%;
@@ -107,6 +117,7 @@ header {
 main {
 	background-color: $dominant-color;
 	@mixin sub-section{
+		text-align: center;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -117,22 +128,21 @@ main {
 
 
 		header {
-			display: flex;
-			flex-wrap: wrap;
-			font-size: 32px;
+			font-size: 48px;
 			padding: 1rem;
 			margin-top: 1rem;
-			margin-left: 1rem;
 		}
 
 		.button {
 			position: relative;
 			width: 175px;
 			height: 50px;
-			border: solid 2px #B21A4E;
+			border: solid 2px $pink-red-color;
 			background: transparent;
 			color: white;
 			text-transform: uppercase;
+			justify-self: center;
+			align-self: center;
 
 			.arrow-btn-right {
 				position: absolute;
@@ -143,15 +153,19 @@ main {
 
 		p {
 			z-index: 6000;
+			text-align: center;
 			margin: 1rem;
 			padding: 1rem;
 			padding-top: 3rem;
-			letter-spacing: .2rem;
+			letter-spacing: .1rem;
+			font-family: sans-serif;
+			font-weight: 100;
+			font-size: 14px;
 		}
 
 
 		.main-img {
-			height: 256px;
+			height: 264px;
 			width: 100%;
 			box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 		}
@@ -159,37 +173,29 @@ main {
 
 	#info-box {
 		@include sub-section();
-		transform: skewY(-20deg);
 		box-shadow: 3px 3px 3px 3px #130e183f;
 		position: relative;
 		z-index: 5000;
 		border-radius: 0.1rem;
+		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
 		p {
-			margin-top: 2rem;
-			transform: skewY(20deg);;
+			letter-spacing: .1rem;
+			font-family: "MontSerrat";
+			font-weight: lighter;
+			font-size: 24px;
 		}
 
 		.button {
-			transform: skewY(20deg);
-			margin-top: -2rem;
-			margin-left: 2rem;
-			margin-bottom: 3rem;
+			justify-self: center;
+			align-self: center;
+			margin-bottom: 6rem;
 		}
 	}
 
 	.sub-1 {
 		@include sub-section();
 		background-color: $dominant-color;
-		margin-top: 2rem;
-		
-		header {
-			z-index: 6000;
-			.waves {
-				bottom: -50%;
-				left: 4.5%;
-			}
-		}
 
 		.hex-img {
 			position: absolute;
@@ -197,10 +203,10 @@ main {
 			width: 264px;
 			left: 35%;
 			top: 20%;
+			margin-top: 2rem;
 		}
 
 		.button {
-			margin-left: 2rem;
 			margin: 2rem;
 			margin-bottom: 2rem;
 		}
@@ -208,6 +214,7 @@ main {
 		div {
 			position: relative;
 			padding: 2rem;
+			margin-top: 2rem;
 			margin-bottom: 2rem;
 			display: flex;
 			justify-content: center;
@@ -218,22 +225,34 @@ main {
 				margin-top: 3rem;
 				height: 64px;
 			}
+
+			.waves {
+				position: absolute;
+				top: 0;
+				right: 15%;
+				height: 70px;
+				width: 34px;
+			}
 		}
 	}
 
 	.sub-2 {
 		@include sub-section();
 
+		header {
+			text-align: center;
+			z-index: 1000;
+		}
+
 		.circle-img {
 			position: absolute;
 			height: 248px;
 			width: 264px;
-			left: -20%;
 			top: 0;
+			right: -10%;
 		}
 
 		.button {
-			margin-left: 2rem;
 			margin: 2rem;
 			margin-bottom: 2rem;
 		}
@@ -242,14 +261,6 @@ main {
 			position: relative;
 			padding: 2rem;
 			margin-bottom: 2rem;
-
-			.arrow-img-2-1 {
-				position: absolute;
-				height: 72px;
-				width: 32px;
-				bottom: 0;
-				left: 10%;
-			}
 
 			
 			.arrow-img-2-2 {
@@ -286,6 +297,10 @@ main {
 
 		header {
 			margin-left: 1rem;
+			font-family: sans-serif;
+			font-weight: normal;
+			font-size: 13px;
+			color: $pink-red-color;
 		}
 
 		main {
@@ -347,7 +362,6 @@ main {
 
 
 footer {
-	font-family: $main-font;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -357,5 +371,14 @@ footer {
 
 	div {
 		padding: 1rem;
+
+		span {
+			font-family: 'FairDisplay';
+			color: $pink-red-color;
+		}
+
+		p {
+			font-family: sans-serif;
+		}
 	}
 }
