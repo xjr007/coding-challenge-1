@@ -7,6 +7,8 @@ $main-font: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
 }
 
 html {
@@ -31,27 +33,79 @@ header {
 		justify-content: center;
 		align-items: center;
 
-			.logo {
-				position: absolute;
-				padding: 2rem;
-				top: 40%;
+		.overlay {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 7000;
+			top: 0;
+			left: 0;
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0, 0.9);
+			overflow-x: hidden;
+			transition: 0.5s;
+
+			a {
+				padding: 8px;
+				text-decoration: none;
+				font-size: 36px;
+				color: #818181;
+				display: block;
+				transition: 0.3s;
+				
+				&:hover, &:focus {
+					color: #f1f1f1;
+				}
 			}
 
+			.closeBtn {
+				position: absolute;
+				top: 2rem;
+				left: 2rem;
+				font-size: 60px;
+				}
+
+			.overlay-content {
+				position: relative;
+				top: 25%;
+				width: 100%;
+				text-align: center;
+				margin-top: 30px;
+				}
+		  }
+
+		.burger {
+			font-size: 2.1rem;
+			cursor: pointer;
+			position: absolute;
+			top: 1rem;
+			left: 2rem;
+		}
+
+		.logo {
+			position: absolute;
+			padding: 2rem;
+			top: 40%;
+		}
+
+		.arrow-nav {
+			display: none;
 			.arrow-down {
-				padding: 1rem;
 				position: absolute;
 				bottom: 5%;
+				right: 48%;
 				transition: all 0.7s ease;
-
+	
 				&:hover {
 					bottom: 8%;
 				}
 			}
+		}
 	}
 }
 
 main {
-
+	background-color: $dominant-color;
 	@mixin sub-section{
 		position: relative;
 		display: flex;
@@ -65,7 +119,7 @@ main {
 		header {
 			display: flex;
 			flex-wrap: wrap;
-			font-size: 48px;
+			font-size: 32px;
 			padding: 1rem;
 			margin-top: 1rem;
 			margin-left: 1rem;
@@ -88,7 +142,7 @@ main {
 		}
 
 		p {
-			z-index: 10000;
+			z-index: 6000;
 			margin: 1rem;
 			padding: 1rem;
 			padding-top: 3rem;
@@ -103,11 +157,34 @@ main {
 		}
 	}
 
+	#info-box {
+		@include sub-section();
+		transform: skewY(-20deg);
+		box-shadow: 3px 3px 3px 3px #130e183f;
+		position: relative;
+		z-index: 5000;
+		border-radius: 0.1rem;
+
+		p {
+			margin-top: 2rem;
+			transform: skewY(20deg);;
+		}
+
+		.button {
+			transform: skewY(20deg);
+			margin-top: -2rem;
+			margin-left: 2rem;
+			margin-bottom: 3rem;
+		}
+	}
+
 	.sub-1 {
 		@include sub-section();
 		background-color: $dominant-color;
+		margin-top: 2rem;
 		
 		header {
+			z-index: 6000;
 			.waves {
 				bottom: -50%;
 				left: 4.5%;
@@ -139,6 +216,7 @@ main {
 
 			.arrow-image {
 				margin-top: 3rem;
+				height: 64px;
 			}
 		}
 	}
@@ -165,11 +243,20 @@ main {
 			padding: 2rem;
 			margin-bottom: 2rem;
 
-			.arrow-img-2 {
+			.arrow-img-2-1 {
 				position: absolute;
-				height: 127px;
-				width: 31px;
-				bottom: -5%;
+				height: 72px;
+				width: 32px;
+				bottom: 0;
+				left: 10%;
+			}
+
+			
+			.arrow-img-2-2 {
+				position: absolute;
+				height: 72px;
+				width: 32px;
+				bottom: 0;
 				right: 10%;
 			}
 	
@@ -179,6 +266,7 @@ main {
 	}
 
 	@mixin card($image) {
+		position: relative;
 		background-image: $image;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -188,15 +276,26 @@ main {
 		padding-right: 0.5rem;
 		margin: 0.5rem 1rem;
 		box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+		transition: all 0.7s ease;
+
 		
+		&:hover {
+			transform: scale(1.005);
+			box-shadow: 5px 5px 5px 5px #130e183f;
+		}
+
 		header {
 			margin-left: 1rem;
 		}
 
 		main {
+			background-color: inherit;
 			margin-top: 3rem;
-			margin-left: 1.5rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
+			margin-bottom: 1rem;
 			height: 192px;
+			font-size: 32px;
 		}
 
 		footer {
@@ -208,6 +307,15 @@ main {
 			margin-left: auto;
 			margin-right: 1rem;
 			width: fit-content;
+
+			img {
+				transition: all 0.7s ease;
+				overflow: hidden;
+				
+				&:hover {
+					transform: translateX(-20%);
+				}
+			}
 		}
 	}
 
@@ -215,9 +323,9 @@ main {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		background: white cover no-repeat;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
+		background-color: white;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 
 	}
 

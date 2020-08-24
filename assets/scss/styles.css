@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -33,22 +34,160 @@ header section {
           align-items: center;
 }
 
+header section .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 7000;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header section .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header section .overlay a:hover, header section .overlay a:focus {
+  color: #f1f1f1;
+}
+
+header section .overlay .closeBtn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 60px;
+}
+
+header section .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+header section .burger {
+  font-size: 2.1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
 header section .logo {
   position: absolute;
   padding: 2rem;
   top: 40%;
 }
 
-header section .arrow-down {
-  padding: 1rem;
+header section .arrow-nav {
+  display: none;
+}
+
+header section .arrow-nav .arrow-down {
   position: absolute;
   bottom: 5%;
+  right: 48%;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
-header section .arrow-down:hover {
+header section .arrow-nav .arrow-down:hover {
   bottom: 8%;
+}
+
+main {
+  background-color: #201728;
+}
+
+main #info-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #6F249B;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  -webkit-transform: skewY(-20deg);
+          transform: skewY(-20deg);
+  -webkit-box-shadow: 3px 3px 3px 3px #130e183f;
+          box-shadow: 3px 3px 3px 3px #130e183f;
+  position: relative;
+  z-index: 5000;
+  border-radius: 0.1rem;
+}
+
+main #info-box header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 32px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+main #info-box .button {
+  position: relative;
+  width: 175px;
+  height: 50px;
+  border: solid 2px #B21A4E;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+
+main #info-box .button .arrow-btn-right {
+  position: absolute;
+  right: -15%;
+  top: 30%;
+}
+
+main #info-box p {
+  z-index: 6000;
+  margin: 1rem;
+  padding: 1rem;
+  padding-top: 3rem;
+  letter-spacing: .2rem;
+}
+
+main #info-box .main-img {
+  height: 256px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+          box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+}
+
+main #info-box p {
+  margin-top: 2rem;
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+}
+
+main #info-box .button {
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+  margin-top: -2rem;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
 }
 
 main .sub-1 {
@@ -65,6 +204,7 @@ main .sub-1 {
   height: auto;
   width: 100%;
   background-color: #201728;
+  margin-top: 2rem;
 }
 
 main .sub-1 header {
@@ -73,7 +213,7 @@ main .sub-1 header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 48px;
+  font-size: 32px;
   padding: 1rem;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -96,7 +236,7 @@ main .sub-1 .button .arrow-btn-right {
 }
 
 main .sub-1 p {
-  z-index: 10000;
+  z-index: 6000;
   margin: 1rem;
   padding: 1rem;
   padding-top: 3rem;
@@ -108,6 +248,10 @@ main .sub-1 .main-img {
   width: 100%;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+}
+
+main .sub-1 header {
+  z-index: 6000;
 }
 
 main .sub-1 header .waves {
@@ -150,6 +294,7 @@ main .sub-1 div {
 
 main .sub-1 div .arrow-image {
   margin-top: 3rem;
+  height: 64px;
 }
 
 main .sub-2 {
@@ -173,7 +318,7 @@ main .sub-2 header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 48px;
+  font-size: 32px;
   padding: 1rem;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -196,7 +341,7 @@ main .sub-2 .button .arrow-btn-right {
 }
 
 main .sub-2 p {
-  z-index: 10000;
+  z-index: 6000;
   margin: 1rem;
   padding: 1rem;
   padding-top: 3rem;
@@ -230,11 +375,19 @@ main .sub-2 div {
   margin-bottom: 2rem;
 }
 
-main .sub-2 div .arrow-img-2 {
+main .sub-2 div .arrow-img-2-1 {
   position: absolute;
-  height: 127px;
-  width: 31px;
-  bottom: -5%;
+  height: 72px;
+  width: 32px;
+  bottom: 0;
+  left: 10%;
+}
+
+main .sub-2 div .arrow-img-2-2 {
+  position: absolute;
+  height: 72px;
+  width: 32px;
+  bottom: 0;
   right: 10%;
 }
 
@@ -248,12 +401,13 @@ main .cards {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white cover no-repeat;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 main .square {
+  position: relative;
   background-image: url("../img//bg-square-gradient.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,6 +418,15 @@ main .square {
   margin: 0.5rem 1rem;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+main .square:hover {
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
+          box-shadow: 5px 5px 5px 5px #130e183f;
 }
 
 main .square header {
@@ -271,9 +434,13 @@ main .square header {
 }
 
 main .square main {
+  background-color: inherit;
   margin-top: 3rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   height: 192px;
+  font-size: 32px;
 }
 
 main .square footer {
@@ -289,7 +456,19 @@ main .square footer {
   width: fit-content;
 }
 
+main .square footer img {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  overflow: hidden;
+}
+
+main .square footer img:hover {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
 main .rectangle {
+  position: relative;
   background-image: url("../img//bg-rectangle-gradient.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -300,6 +479,15 @@ main .rectangle {
   margin: 0.5rem 1rem;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+main .rectangle:hover {
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
+          box-shadow: 5px 5px 5px 5px #130e183f;
 }
 
 main .rectangle header {
@@ -307,9 +495,13 @@ main .rectangle header {
 }
 
 main .rectangle main {
+  background-color: inherit;
   margin-top: 3rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   height: 192px;
+  font-size: 32px;
 }
 
 main .rectangle footer {
@@ -325,7 +517,19 @@ main .rectangle footer {
   width: fit-content;
 }
 
+main .rectangle footer img {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  overflow: hidden;
+}
+
+main .rectangle footer img:hover {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
 main .circle {
+  position: relative;
   background-image: url("../img//bg-circle-gradient.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -336,6 +540,15 @@ main .circle {
   margin: 0.5rem 1rem;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+main .circle:hover {
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
+          box-shadow: 5px 5px 5px 5px #130e183f;
 }
 
 main .circle header {
@@ -343,9 +556,13 @@ main .circle header {
 }
 
 main .circle main {
+  background-color: inherit;
   margin-top: 3rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   height: 192px;
+  font-size: 32px;
 }
 
 main .circle footer {
@@ -359,6 +576,17 @@ main .circle footer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+main .circle footer img {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  overflow: hidden;
+}
+
+main .circle footer img:hover {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
 }
 
 footer {
