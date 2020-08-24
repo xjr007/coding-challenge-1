@@ -40,7 +40,61 @@ $pink-red-color: #B21A4E;
 				font-size: 48px !important;
 			}
 		}
+
+		.cards {
+			display: flex;
+			flex-flow: row !important;
+			width: 100%;
+
+			.square, .rectangle, .circle {
+				margin: auto;
+				padding: 0 !important;
+				width: 30%;
+				height: auto;
+
+				.card {
+					width: 400px;
+					height: 400px;
+				}
+
+
+			header {
+				font-size: smaller;
+				margin: 1rem;
+			}
+
+			main {
+				font-size: 32px;
+				padding: 1rem;
+				margin: 0 !important;
+			}
+
+			footer {
+				position: absolute;
+				bottom: 1rem ;
+				right: 1rem;
+			}
+			}
+		}
 	}
+
+	footer {
+		display: flex;
+		flex-flow: row !important;
+		justify-content: space-evenly;
+
+		div {
+			span {
+				font-size: larger;
+			}
+
+			p {
+				font-size: smaller;
+			}
+		}
+	}
+
+
 }
 
 

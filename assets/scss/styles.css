@@ -38,6 +38,58 @@
   main #info-box p {
     font-size: 48px !important;
   }
+  main .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row !important;
+            flex-flow: row !important;
+    width: 100%;
+  }
+  main .cards .square, main .cards .rectangle, main .cards .circle {
+    margin: auto;
+    padding: 0 !important;
+    width: 30%;
+    height: auto;
+  }
+  main .cards .square .card, main .cards .rectangle .card, main .cards .circle .card {
+    width: 400px;
+    height: 400px;
+  }
+  main .cards .square header, main .cards .rectangle header, main .cards .circle header {
+    font-size: smaller;
+    margin: 1rem;
+  }
+  main .cards .square main, main .cards .rectangle main, main .cards .circle main {
+    font-size: 32px;
+    padding: 1rem;
+    margin: 0 !important;
+  }
+  main .cards .square footer, main .cards .rectangle footer, main .cards .circle footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row !important;
+            flex-flow: row !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer div span {
+    font-size: larger;
+  }
+  footer div p {
+    font-size: smaller;
+  }
 }
 
 * {
