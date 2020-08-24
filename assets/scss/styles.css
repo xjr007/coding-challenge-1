@@ -229,7 +229,7 @@ main #info-box {
 }
 
 main #info-box header {
-  font-size: 48px;
+  font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -247,6 +247,15 @@ main #info-box .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+main #info-box .button:hover, main #info-box .button :focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: large;
 }
 
 main #info-box .button .arrow-btn-right {
@@ -308,7 +317,7 @@ main .sub-1 {
 }
 
 main .sub-1 header {
-  font-size: 48px;
+  font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -326,6 +335,15 @@ main .sub-1 .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+main .sub-1 .button:hover, main .sub-1 .button :focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: large;
 }
 
 main .sub-1 .button .arrow-btn-right {
@@ -417,7 +435,7 @@ main .sub-2 {
 }
 
 main .sub-2 header {
-  font-size: 48px;
+  font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -435,6 +453,15 @@ main .sub-2 .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+main .sub-2 .button:hover, main .sub-2 .button :focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: large;
 }
 
 main .sub-2 .button .arrow-btn-right {
@@ -530,6 +557,7 @@ main .square:hover {
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
           box-shadow: 5px 5px 5px 5px #130e183f;
+  cursor: pointer;
 }
 
 main .square header {
@@ -595,6 +623,7 @@ main .rectangle:hover {
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
           box-shadow: 5px 5px 5px 5px #130e183f;
+  cursor: pointer;
 }
 
 main .rectangle header {
@@ -660,6 +689,7 @@ main .circle:hover {
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
           box-shadow: 5px 5px 5px 5px #130e183f;
+  cursor: pointer;
 }
 
 main .circle header {
@@ -731,5 +761,13 @@ footer div span {
 
 footer div p {
   font-family: sans-serif;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+footer div p:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 /*# sourceMappingURL=styles.css.map */

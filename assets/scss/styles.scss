@@ -216,7 +216,7 @@ main {
 
 
 		header {
-			font-size: 48px;
+			font-size: 40px;
 			padding: 1rem;
 			margin-top: 1rem;
 		}
@@ -231,6 +231,13 @@ main {
 			text-transform: uppercase;
 			justify-self: center;
 			align-self: center;
+			transition: all 0.7s;
+
+			&:hover, :focus {
+				cursor: pointer;
+				transform: scale(1.1);
+				font-size: large;
+			}
 
 			.arrow-btn-right {
 				position: absolute;
@@ -381,6 +388,7 @@ main {
 		&:hover {
 			transform: scale(1.005);
 			box-shadow: 5px 5px 5px 5px #130e183f;
+			cursor: pointer;
 		}
 
 		header {
@@ -467,6 +475,12 @@ footer {
 
 		p {
 			font-family: sans-serif;
+			transition: all 0.7s;
+
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.01);
+			}
 		}
 	}
 }
