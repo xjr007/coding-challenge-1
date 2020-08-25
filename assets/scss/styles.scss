@@ -2,6 +2,7 @@ $dominant-color: #201728;
 $light-purple-color: #6F249B;
 $darker-purple-color: #5E2083;
 $pink-red-color: #B21A4E;
+
 @font-face {
 	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 	font-family: MontSerrat;
@@ -9,10 +10,30 @@ $pink-red-color: #B21A4E;
 	font-family: FairDisplay;
 }
 
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
+}
+
+html {
+	font-family: 'MontSerrat';
+}
+
+body {
+	color: white;
+}
+
+button {
+	font-family: sans-serif;
+}
+
 @media (min-width:801px)  { 
-	/*Laptop and Desktop
-	683 x 470 main img
-	*/
+	/*Laptop and Desktop*/
 	header {
 		section {
 			.arrow-nav {
@@ -86,16 +107,50 @@ $pink-red-color: #B21A4E;
 		}
 
 		.sub-2 {
+			header {
+				position: absolute;
+				top: 17%;
+				right: 22%;
+				font-size: 64px !important;
+				color: whitesmoke !important;
+			}
+
+			p {
+				position: absolute;
+				top: 25.5%;
+				right: 18%;
+				width: 22%;
+				text-align: initial !important;
+				letter-spacing: 0.25rem !important;
+				font-weight: 100 !important;
+				color: rgba(245, 245, 245, 0.714) !important;
+			}
+
+			.circle-img {
+				top: 5% !important;
+				left: 41%;
+				height: 501px !important;
+				width: 501px !important;
+			}
+
+			.button {
+				position: absolute !important;
+				top: 53% !important;
+				right: 26.5%;
+			}
+
 			div {
 				width: fit-content !important;
+				padding-bottom: 7rem !important;
+				padding-top: 10rem !important;
 				.main-img {
-					height: 500px !important;
+					height: 450px !important;
 					width: 700px !important;
-					margin-bottom: 10rem !important;
-					margin-left: 5rem !important;
+					margin-bottom: 8rem !important;
+					margin-left: 7rem !important;
 				}
 				.arrow-img-2-2 {
-					bottom: 10% !important;
+					bottom: 18% !important;
 					right: 0;
 					height: auto !important;
 					width: auto !important;
@@ -124,26 +179,6 @@ $pink-red-color: #B21A4E;
 
 }
 
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-	
-}
-
-html {
-	font-family: 'MontSerrat';
-}
-
-body {
-	color: white;
-}
-
-button {
-	font-family: sans-serif;
-}
 
 header {
 	section {
