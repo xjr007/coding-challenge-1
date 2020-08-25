@@ -6,7 +6,9 @@
 }
 
 @media (min-width: 801px) {
-  /*Laptop and Desktop*/
+  /*Laptop and Desktop
+	683 x 470 main img
+	*/
   header section .arrow-nav .arrow-down {
     bottom: 8% !important;
     right: 50% !important;
@@ -47,30 +49,52 @@
         -ms-flex-flow: row !important;
             flex-flow: row !important;
     width: 100%;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
   }
   main .cards .square, main .cards .rectangle, main .cards .circle {
     margin: auto;
-    padding: 0 !important;
     width: 30%;
     height: auto;
   }
   main .cards .square .card, main .cards .rectangle .card, main .cards .circle .card {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
   main .cards .square header, main .cards .rectangle header, main .cards .circle header {
-    font-size: smaller;
+    font-size: larger;
     margin: 1rem;
   }
   main .cards .square main, main .cards .rectangle main, main .cards .circle main {
     font-size: 32px;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin: 0 !important;
+    height: auto;
   }
   main .cards .square footer, main .cards .rectangle footer, main .cards .circle footer {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+  }
+  main .sub-2 div {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  main .sub-2 div .main-img {
+    height: 500px !important;
+    width: 700px !important;
+    margin-bottom: 10rem !important;
+    margin-left: 5rem !important;
+  }
+  main .sub-2 div .arrow-img-2-2 {
+    bottom: 10% !important;
+    right: 0;
+    height: auto !important;
+    width: auto !important;
   }
   footer {
     display: -webkit-box;
