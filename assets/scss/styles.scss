@@ -2,6 +2,8 @@ $dominant-color: #201728;
 $light-purple-color: #6F249B;
 $darker-purple-color: #5E2083;
 $pink-red-color: #B21A4E;
+$main-text-color: rgba(245, 245, 245, 0.904);
+$sub-text-color: rgba(245, 245, 245, 0.694);
 
 @font-face {
 	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
@@ -30,19 +32,35 @@ body {
 button {
 	font-family: system-ui, system-ui, sans-serif;
 	outline: none;
+	color: $sub-text-color !important;
 }
 
 @media (min-width:801px)  { 
 	/*Laptop and Desktop*/
 	.header-header {
 		.main-1 {
+			height: 110vh !important;
+
+			.overlay {
+				.closeBtn {
+					top: 1rem !important;
+					right: 2.7rem !important;
+				}
+			}
+
+			.burger {
+				top: 2rem !important;
+				right: 4rem !important;
+			}
+
 			.arrow-nav {
 				.arrow-down {
-					bottom: 8% !important;
-					right: 50% !important;
+					padding: 1rem;
+					bottom: 15% !important;
+					right: 49% !important;
 
 					&:hover {
-						bottom: 10% !important;
+						bottom: 18% !important;
 					}
 				}
 			}
@@ -55,6 +73,8 @@ button {
 		align-items: center;
 		flex-direction: column;
 		width: 101% !important;
+		position: relative;
+
 		#info-box {
 			width: 60% !important;
 			transform: translateY(-10%);
@@ -64,44 +84,78 @@ button {
 			}
 		}
 
-		.cards {
-			display: flex;
-			flex-flow: row !important;
-			
-			padding-top: 5rem !important;
-			padding-bottom: 5rem !important;
-			width: 100%;
-			
-			overflow-x: hidden;
-			padding-left: 3rem;
+		.cross {
+			position: absolute !important;
+			z-index: 1;
+			top: 15%;
+			left: 12%;
+		}
 
-			.square, .rectangle, .circle {
-				width: 30%;
-				height: auto;
+		
 
-				.card {
-					height: 300px;
+		.sub-1 {
+			padding-top: 20rem;
+
+			.head {
+				display: flex;
+				flex-flow: column;
+				position: absolute;
+				top: 27%;
+				width: 22%;
+				left: 15%;
+				font-size: 72px !important;
+				z-index: 1;
+				font-weight: 500;
+				color: $main-text-color !important;
+			}
+
+			.para {
+				position: absolute;
+				left: 14%;
+				top: 42%;
+				width: 22%;
+				font-weight: initial !important;
+				color: $sub-text-color !important;
+				text-align: start !important;
+				letter-spacing: .2rem !important;
+
+			}
+			.button {
+				position: absolute !important;
+				top: 60% !important;
+				left: 14%;
+				z-index: 1;
+			}
+
+			.hex-img {
+				left: 28% !important;
+				top: 20% !important;
+				height: 490px !important;
+				width: 470px !important;
+			}
+			.img-box {
+				margin-bottom: 4.5rem !important;
+				padding-top: 5rem !important;
+				.main-img {
+					height: 500px;
+					width: 700px;
+					margin-left: 28rem;
+					margin-bottom: 7rem;
 				}
 
+				.waves {
+					height: 121px !important;
+					width: 54px !important;
+					top: 5% !important;
+					right: 16% !important;
+				}
 
-			.card-head {
-				font-size: larger;
-				margin: 1rem;
-			}
-
-			.card-content {
-				font-size: 32px;
-				padding-left: 1rem;
-				padding-right: 1rem;
-				margin: 0 !important;
-				height: auto;
-			}
-
-			.card-foot {
-				position: absolute;
-				bottom: 1rem ;
-				right: 1rem;
-			}
+				.arrow-image {
+					position: absolute;
+					bottom: 7%;
+					height: 121px !important;
+					left: 35% !important;
+				}
 			}
 		}
 
@@ -111,7 +165,7 @@ button {
 				top: 17%;
 				right: 22%;
 				font-size: 64px !important;
-				color: whitesmoke !important;
+				color: $main-text-color !important;
 			}
 
 			.para {
@@ -122,7 +176,7 @@ button {
 				text-align: initial !important;
 				letter-spacing: 0.25rem !important;
 				font-weight: 100 !important;
-				color: rgba(245, 245, 245, 0.714) !important;
+				color: $sub-text-color !important;
 			}
 
 			.circle-img {
@@ -156,6 +210,47 @@ button {
 				}
 			}
 			
+		}
+
+		.cards {
+			display: flex;
+			flex-flow: row !important;
+			
+			padding-top: 5rem !important;
+			padding-bottom: 5rem !important;
+			width: 100%;
+			
+			overflow-x: hidden;
+			padding-left: 3rem;
+
+			.square, .rectangle, .circle {
+				width: 30%;
+				height: auto;
+
+				.card {
+					height: 300px;
+				}
+
+
+			.card-head {
+				font-size: larger;
+				margin: 0.5rem;
+			}
+
+			.card-content {
+				font-size: 40px;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				margin: 0 !important;
+				height: auto;
+			}
+
+			.card-foot {
+				position: absolute;
+				bottom: 1rem ;
+				right: 1rem;
+			}
+			}
 		}
 	}
 
@@ -200,7 +295,7 @@ button {
 			position: fixed;
 			z-index: 7000;
 			top: 0;
-			left: 0;
+			right: 0;
 			background-color: rgb(0,0,0);
 			background-color: rgba(0,0,0, 0.9);
 			overflow-x: hidden;
@@ -221,8 +316,8 @@ button {
 
 			.closeBtn {
 				position: absolute;
-				top: 2rem;
-				left: 2rem;
+				top: 0;
+				right: 2rem;
 				font-size: 60px;
 				}
 
@@ -236,11 +331,11 @@ button {
 		  }
 
 		.burger {
-			font-size: 2.1rem;
+			font-size: 2.5rem;
 			cursor: pointer;
 			position: absolute;
 			top: 1rem;
-			left: 2rem;
+			right: 2rem;
 		}
 
 		.logo {
@@ -289,7 +384,6 @@ button {
 			height: 50px;
 			border: solid 2px $pink-red-color;
 			background: transparent;
-			color: white;
 			text-transform: uppercase;
 			justify-self: center;
 			align-self: center;
@@ -350,6 +444,12 @@ button {
 		}
 	}
 
+	
+	.cross {
+		position: relative;
+		padding-left: 35%;
+	}
+
 	.sub-1 {
 		@include sub-section();
 		background-color: $dominant-color;
@@ -368,7 +468,7 @@ button {
 			margin-bottom: 2rem;
 		}
 
-		.im {
+		.img-box {
 			position: relative;
 			padding: 2rem;
 			margin-top: 2rem;
@@ -445,6 +545,7 @@ button {
 		margin: 0.5rem 1rem;
 		box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 		transition: all 0.7s ease;
+		color: $main-text-color !important;
 
 		
 		&:hover {
@@ -538,6 +639,7 @@ button {
 		.para {
 			font-family: system-ui, system-ui, sans-serif !important;
 			transition: all 0.3s;
+			color: $sub-text-color;
 		}
 
 		.link {
