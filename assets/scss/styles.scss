@@ -17,7 +17,6 @@ $pink-red-color: #B21A4E;
 	margin: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	
 }
 
 html {
@@ -68,12 +67,13 @@ button {
 		.cards {
 			display: flex;
 			flex-flow: row !important;
-			width: 100%;
 			
 			padding-top: 5rem !important;
 			padding-bottom: 5rem !important;
-			padding-left: 4rem !important;
-			padding-right: 4rem !important;
+			width: 100%;
+			
+			overflow-x: hidden;
+			padding-left: 3rem;
 
 			.square, .rectangle, .circle {
 				width: 30%;

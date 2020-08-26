@@ -67,11 +67,11 @@ button {
     -webkit-box-direction: normal !important;
         -ms-flex-flow: row !important;
             flex-flow: row !important;
-    width: 100%;
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: 3rem;
   }
   .content .cards .square, .content .cards .rectangle, .content .cards .circle {
     width: 30%;
