@@ -5,93 +5,6 @@
   font-family: FairDisplay;
 }
 
-@media (min-width: 801px) {
-  /*Laptop and Desktop*/
-  header section .arrow-nav .arrow-down {
-    bottom: 8% !important;
-    right: 50% !important;
-  }
-  header section .arrow-nav .arrow-down:hover {
-    bottom: 10% !important;
-  }
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 101% !important;
-  }
-  main #info-box {
-    width: 60% !important;
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
-  }
-  main #info-box p {
-    font-size: 48px !important;
-  }
-  main .cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-flow: row !important;
-            flex-flow: row !important;
-    width: 100%;
-  }
-  main .cards .square, main .cards .rectangle, main .cards .circle {
-    margin: auto;
-    padding: 0 !important;
-    width: 30%;
-    height: auto;
-  }
-  main .cards .square .card, main .cards .rectangle .card, main .cards .circle .card {
-    width: 400px;
-    height: 400px;
-  }
-  main .cards .square header, main .cards .rectangle header, main .cards .circle header {
-    font-size: smaller;
-    margin: 1rem;
-  }
-  main .cards .square main, main .cards .rectangle main, main .cards .circle main {
-    font-size: 32px;
-    padding: 1rem;
-    margin: 0 !important;
-  }
-  main .cards .square footer, main .cards .rectangle footer, main .cards .circle footer {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-flow: row !important;
-            flex-flow: row !important;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  footer div span {
-    font-size: larger;
-  }
-  footer div p {
-    font-size: smaller;
-  }
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -109,10 +22,233 @@ body {
 }
 
 button {
-  font-family: sans-serif;
+  font-family: system-ui, system-ui, sans-serif;
+  outline: none;
+  color: rgba(245, 245, 245, 0.694) !important;
 }
 
-header section {
+@media (min-width: 801px) {
+  /*Laptop and Desktop*/
+  .header-header .main-1 {
+    height: 110vh !important;
+  }
+  .header-header .main-1 .overlay .closeBtn {
+    top: 1rem !important;
+    right: 2.7rem !important;
+  }
+  .header-header .main-1 .burger {
+    top: 2rem !important;
+    right: 4rem !important;
+  }
+  .header-header .main-1 .arrow-nav .arrow-down {
+    padding: 1rem;
+    bottom: 15% !important;
+    right: 49% !important;
+  }
+  .header-header .main-1 .arrow-nav .arrow-down:hover {
+    bottom: 18% !important;
+  }
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 101% !important;
+    position: relative;
+  }
+  .content #info-box {
+    width: 60% !important;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .content #info-box p {
+    font-size: 48px !important;
+  }
+  .content .cross {
+    position: absolute !important;
+    z-index: 1;
+    top: 15%;
+    left: 12%;
+  }
+  .content .sub-1 {
+    padding-top: 20rem;
+  }
+  .content .sub-1 .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    position: absolute;
+    top: 27%;
+    width: 22%;
+    left: 15%;
+    font-size: 72px !important;
+    z-index: 1;
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.904) !important;
+  }
+  .content .sub-1 .para {
+    position: absolute;
+    left: 14%;
+    top: 42%;
+    width: 22%;
+    font-weight: initial !important;
+    color: rgba(245, 245, 245, 0.694) !important;
+    text-align: start !important;
+    letter-spacing: .2rem !important;
+  }
+  .content .sub-1 .button {
+    position: absolute !important;
+    top: 60% !important;
+    left: 14%;
+    z-index: 1;
+  }
+  .content .sub-1 .hex-img {
+    left: 28% !important;
+    top: 20% !important;
+    height: 490px !important;
+    width: 470px !important;
+  }
+  .content .sub-1 .img-box {
+    margin-bottom: 4.5rem !important;
+    padding-top: 5rem !important;
+  }
+  .content .sub-1 .img-box .main-img {
+    height: 500px;
+    width: 700px;
+    margin-left: 28rem;
+    margin-bottom: 7rem;
+  }
+  .content .sub-1 .img-box .waves {
+    height: 121px !important;
+    width: 54px !important;
+    top: 5% !important;
+    right: 16% !important;
+  }
+  .content .sub-1 .img-box .arrow-image {
+    position: absolute;
+    bottom: 7%;
+    height: 121px !important;
+    left: 35% !important;
+  }
+  .content .sub-2 .head {
+    position: absolute;
+    top: 17%;
+    right: 22%;
+    font-size: 64px !important;
+    color: rgba(245, 245, 245, 0.904) !important;
+  }
+  .content .sub-2 .para {
+    position: absolute;
+    top: 25.5%;
+    right: 18%;
+    width: 22%;
+    text-align: initial !important;
+    letter-spacing: 0.25rem !important;
+    font-weight: 100 !important;
+    color: rgba(245, 245, 245, 0.694) !important;
+  }
+  .content .sub-2 .circle-img {
+    top: 5% !important;
+    left: 41%;
+    height: 550px !important;
+    width: 520px !important;
+  }
+  .content .sub-2 .button {
+    position: absolute !important;
+    top: 53% !important;
+    right: 26.5%;
+  }
+  .content .sub-2 .img-box {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    padding-bottom: 7rem !important;
+    padding-top: 10rem !important;
+  }
+  .content .sub-2 .img-box .main-img {
+    height: 450px !important;
+    width: 700px !important;
+    margin-bottom: 8rem !important;
+    margin-left: 7rem !important;
+  }
+  .content .sub-2 .img-box .arrow-img-2-2 {
+    bottom: 18% !important;
+    right: 0;
+    height: auto !important;
+    width: auto !important;
+  }
+  .content .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row !important;
+            flex-flow: row !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: 3rem;
+  }
+  .content .cards .square, .content .cards .rectangle, .content .cards .circle {
+    width: 30%;
+    height: auto;
+  }
+  .content .cards .square .card, .content .cards .rectangle .card, .content .cards .circle .card {
+    height: 300px;
+  }
+  .content .cards .square .card-head, .content .cards .rectangle .card-head, .content .cards .circle .card-head {
+    font-size: larger;
+    margin: 0.5rem;
+  }
+  .content .cards .square .card-content, .content .cards .rectangle .card-content, .content .cards .circle .card-content {
+    font-size: 40px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0 !important;
+    height: auto;
+  }
+  .content .cards .square .card-foot, .content .cards .rectangle .card-foot, .content .cards .circle .card-foot {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  #contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row !important;
+            flex-flow: row !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #contact .col .head {
+    font-size: larger;
+  }
+  #contact .col .para {
+    font-family: system-ui, system-ui, sans-serif;
+    font-size: smaller;
+  }
+}
+
+.header-header .main-1 {
   background-image: url("../img/hearo-top.jpg");
   background-size: cover;
   background-position: center center;
@@ -132,13 +268,13 @@ header section {
           align-items: center;
 }
 
-header section .overlay {
+.header-header .main-1 .overlay {
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 7000;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
@@ -146,7 +282,7 @@ header section .overlay {
   transition: 0.5s;
 }
 
-header section .overlay a {
+.header-header .main-1 .overlay .nav-item {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -156,18 +292,18 @@ header section .overlay a {
   transition: 0.3s;
 }
 
-header section .overlay a:hover, header section .overlay a:focus {
+.header-header .main-1 .overlay .nav-item:hover, .header-header .main-1 .overlay .nav-item:focus {
   color: #f1f1f1;
 }
 
-header section .overlay .closeBtn {
+.header-header .main-1 .overlay .closeBtn {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 0;
+  right: 2rem;
   font-size: 60px;
 }
 
-header section .overlay .overlay-content {
+.header-header .main-1 .overlay .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
@@ -175,21 +311,21 @@ header section .overlay .overlay-content {
   margin-top: 30px;
 }
 
-header section .burger {
-  font-size: 2.1rem;
+.header-header .main-1 .burger {
+  font-size: 2.5rem;
   cursor: pointer;
   position: absolute;
   top: 1rem;
-  left: 2rem;
+  right: 2rem;
 }
 
-header section .logo {
+.header-header .main-1 .logo {
   position: absolute;
   padding: 2rem;
   top: 40%;
 }
 
-header section .arrow-nav .arrow-down {
+.header-header .main-1 .arrow-nav .arrow-down {
   position: absolute;
   bottom: 5%;
   right: 48%;
@@ -197,15 +333,15 @@ header section .arrow-nav .arrow-down {
   transition: all 0.7s ease;
 }
 
-header section .arrow-nav .arrow-down:hover {
+.header-header .main-1 .arrow-nav .arrow-down:hover {
   bottom: 8%;
 }
 
-main {
+.content {
   background-color: #201728;
 }
 
-main #info-box {
+.content #info-box {
   text-align: center;
   position: relative;
   display: -webkit-box;
@@ -228,19 +364,18 @@ main #info-box {
           clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-main #info-box header {
+.content #info-box .head {
   font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
 
-main #info-box .button {
+.content #info-box .button {
   position: relative;
   width: 175px;
   height: 50px;
   border: solid 2px #B21A4E;
   background: transparent;
-  color: white;
   text-transform: uppercase;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -251,20 +386,20 @@ main #info-box .button {
   transition: all 0.7s;
 }
 
-main #info-box .button:hover, main #info-box .button :focus {
+.content #info-box .button:hover, .content #info-box .button :focus {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   font-size: large;
 }
 
-main #info-box .button .arrow-btn-right {
+.content #info-box .button .arrow-btn-right {
   position: absolute;
   right: -15%;
   top: 30%;
 }
 
-main #info-box p {
+.content #info-box .para {
   z-index: 6000;
   text-align: center;
   margin: 1rem;
@@ -276,21 +411,21 @@ main #info-box p {
   font-size: 14px;
 }
 
-main #info-box .main-img {
+.content #info-box .main-img {
   height: 264px;
   width: 100%;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
-main #info-box p {
+.content #info-box .para {
   letter-spacing: .1rem;
   font-family: "MontSerrat";
   font-weight: lighter;
   font-size: 24px;
 }
 
-main #info-box .button {
+.content #info-box .button {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
@@ -299,7 +434,12 @@ main #info-box .button {
   margin-bottom: 6rem;
 }
 
-main .sub-1 {
+.content .cross {
+  position: relative;
+  padding-left: 35%;
+}
+
+.content .sub-1 {
   text-align: center;
   position: relative;
   display: -webkit-box;
@@ -316,19 +456,18 @@ main .sub-1 {
   background-color: #201728;
 }
 
-main .sub-1 header {
+.content .sub-1 .head {
   font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
 
-main .sub-1 .button {
+.content .sub-1 .button {
   position: relative;
   width: 175px;
   height: 50px;
   border: solid 2px #B21A4E;
   background: transparent;
-  color: white;
   text-transform: uppercase;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -339,20 +478,20 @@ main .sub-1 .button {
   transition: all 0.7s;
 }
 
-main .sub-1 .button:hover, main .sub-1 .button :focus {
+.content .sub-1 .button:hover, .content .sub-1 .button :focus {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   font-size: large;
 }
 
-main .sub-1 .button .arrow-btn-right {
+.content .sub-1 .button .arrow-btn-right {
   position: absolute;
   right: -15%;
   top: 30%;
 }
 
-main .sub-1 p {
+.content .sub-1 .para {
   z-index: 6000;
   text-align: center;
   margin: 1rem;
@@ -364,14 +503,14 @@ main .sub-1 p {
   font-size: 14px;
 }
 
-main .sub-1 .main-img {
+.content .sub-1 .main-img {
   height: 264px;
   width: 100%;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
-main .sub-1 .hex-img {
+.content .sub-1 .hex-img {
   position: absolute;
   height: 248px;
   width: 264px;
@@ -380,12 +519,12 @@ main .sub-1 .hex-img {
   margin-top: 2rem;
 }
 
-main .sub-1 .button {
+.content .sub-1 .button {
   margin: 2rem;
   margin-bottom: 2rem;
 }
 
-main .sub-1 div {
+.content .sub-1 .img-box {
   position: relative;
   padding: 2rem;
   margin-top: 2rem;
@@ -405,12 +544,12 @@ main .sub-1 div {
           flex-direction: column;
 }
 
-main .sub-1 div .arrow-image {
+.content .sub-1 .img-box .arrow-image {
   margin-top: 3rem;
   height: 64px;
 }
 
-main .sub-1 div .waves {
+.content .sub-1 .img-box .waves {
   position: absolute;
   top: 0;
   right: 15%;
@@ -418,7 +557,7 @@ main .sub-1 div .waves {
   width: 34px;
 }
 
-main .sub-2 {
+.content .sub-2 {
   text-align: center;
   position: relative;
   display: -webkit-box;
@@ -434,19 +573,18 @@ main .sub-2 {
   width: 100%;
 }
 
-main .sub-2 header {
+.content .sub-2 .head {
   font-size: 40px;
   padding: 1rem;
   margin-top: 1rem;
 }
 
-main .sub-2 .button {
+.content .sub-2 .button {
   position: relative;
   width: 175px;
   height: 50px;
   border: solid 2px #B21A4E;
   background: transparent;
-  color: white;
   text-transform: uppercase;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -457,20 +595,20 @@ main .sub-2 .button {
   transition: all 0.7s;
 }
 
-main .sub-2 .button:hover, main .sub-2 .button :focus {
+.content .sub-2 .button:hover, .content .sub-2 .button :focus {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   font-size: large;
 }
 
-main .sub-2 .button .arrow-btn-right {
+.content .sub-2 .button .arrow-btn-right {
   position: absolute;
   right: -15%;
   top: 30%;
 }
 
-main .sub-2 p {
+.content .sub-2 .para {
   z-index: 6000;
   text-align: center;
   margin: 1rem;
@@ -482,19 +620,19 @@ main .sub-2 p {
   font-size: 14px;
 }
 
-main .sub-2 .main-img {
+.content .sub-2 .main-img {
   height: 264px;
   width: 100%;
   -webkit-box-shadow: 1px 1px 1.5px 1.5px #130e183f;
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 }
 
-main .sub-2 header {
+.content .sub-2 .head {
   text-align: center;
   z-index: 1000;
 }
 
-main .sub-2 .circle-img {
+.content .sub-2 .circle-img {
   position: absolute;
   height: 248px;
   width: 264px;
@@ -502,18 +640,18 @@ main .sub-2 .circle-img {
   right: -10%;
 }
 
-main .sub-2 .button {
+.content .sub-2 .button {
   margin: 2rem;
   margin-bottom: 2rem;
 }
 
-main .sub-2 div {
+.content .sub-2 .img-box {
   position: relative;
   padding: 2rem;
   margin-bottom: 2rem;
 }
 
-main .sub-2 div .arrow-img-2-2 {
+.content .sub-2 .img-box .arrow-img-2-2 {
   position: absolute;
   height: 72px;
   width: 32px;
@@ -521,7 +659,7 @@ main .sub-2 div .arrow-img-2-2 {
   right: 10%;
 }
 
-main .cards {
+.content .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,7 +674,7 @@ main .cards {
   padding-bottom: 2rem;
 }
 
-main .square {
+.content .square {
   position: relative;
   background-image: url("../img//bg-square-gradient.png");
   background-size: cover;
@@ -550,9 +688,10 @@ main .square {
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  color: rgba(245, 245, 245, 0.904) !important;
 }
 
-main .square:hover {
+.content .square:hover {
   -webkit-transform: scale(1.005);
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
@@ -560,7 +699,7 @@ main .square:hover {
   cursor: pointer;
 }
 
-main .square header {
+.content .square .card-head {
   margin-left: 1rem;
   font-family: sans-serif;
   font-weight: normal;
@@ -568,7 +707,7 @@ main .square header {
   color: #B21A4E;
 }
 
-main .square main {
+.content .square .card-content {
   background-color: inherit;
   margin-top: 3rem;
   margin-left: 1rem;
@@ -578,7 +717,7 @@ main .square main {
   font-size: 32px;
 }
 
-main .square footer {
+.content .square .card-foot {
   position: relative;
   bottom: 0;
   background: transparent;
@@ -591,18 +730,18 @@ main .square footer {
   width: fit-content;
 }
 
-main .square footer img {
+.content .square .card-foot .card-arrow-right {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   overflow: hidden;
 }
 
-main .square footer img:hover {
+.content .square .card-foot .card-arrow-right:hover {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
 
-main .rectangle {
+.content .rectangle {
   position: relative;
   background-image: url("../img//bg-rectangle-gradient.png");
   background-size: cover;
@@ -616,9 +755,10 @@ main .rectangle {
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  color: rgba(245, 245, 245, 0.904) !important;
 }
 
-main .rectangle:hover {
+.content .rectangle:hover {
   -webkit-transform: scale(1.005);
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
@@ -626,7 +766,7 @@ main .rectangle:hover {
   cursor: pointer;
 }
 
-main .rectangle header {
+.content .rectangle .card-head {
   margin-left: 1rem;
   font-family: sans-serif;
   font-weight: normal;
@@ -634,7 +774,7 @@ main .rectangle header {
   color: #B21A4E;
 }
 
-main .rectangle main {
+.content .rectangle .card-content {
   background-color: inherit;
   margin-top: 3rem;
   margin-left: 1rem;
@@ -644,7 +784,7 @@ main .rectangle main {
   font-size: 32px;
 }
 
-main .rectangle footer {
+.content .rectangle .card-foot {
   position: relative;
   bottom: 0;
   background: transparent;
@@ -657,18 +797,18 @@ main .rectangle footer {
   width: fit-content;
 }
 
-main .rectangle footer img {
+.content .rectangle .card-foot .card-arrow-right {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   overflow: hidden;
 }
 
-main .rectangle footer img:hover {
+.content .rectangle .card-foot .card-arrow-right:hover {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
 
-main .circle {
+.content .circle {
   position: relative;
   background-image: url("../img//bg-circle-gradient.png");
   background-size: cover;
@@ -682,9 +822,10 @@ main .circle {
           box-shadow: 1px 1px 1.5px 1.5px #130e183f;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  color: rgba(245, 245, 245, 0.904) !important;
 }
 
-main .circle:hover {
+.content .circle:hover {
   -webkit-transform: scale(1.005);
           transform: scale(1.005);
   -webkit-box-shadow: 5px 5px 5px 5px #130e183f;
@@ -692,7 +833,7 @@ main .circle:hover {
   cursor: pointer;
 }
 
-main .circle header {
+.content .circle .card-head {
   margin-left: 1rem;
   font-family: sans-serif;
   font-weight: normal;
@@ -700,7 +841,7 @@ main .circle header {
   color: #B21A4E;
 }
 
-main .circle main {
+.content .circle .card-content {
   background-color: inherit;
   margin-top: 3rem;
   margin-left: 1rem;
@@ -710,7 +851,7 @@ main .circle main {
   font-size: 32px;
 }
 
-main .circle footer {
+.content .circle .card-foot {
   position: relative;
   bottom: 0;
   background: transparent;
@@ -723,18 +864,18 @@ main .circle footer {
   width: fit-content;
 }
 
-main .circle footer img {
+.content .circle .card-foot .card-arrow-right {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   overflow: hidden;
 }
 
-main .circle footer img:hover {
+.content .circle .card-foot .card-arrow-right:hover {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
 }
 
-footer {
+#contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,24 +891,24 @@ footer {
   background: #201728;
 }
 
-footer div {
+#contact .col {
   padding: 1rem;
 }
 
-footer div span {
+#contact .col .head {
   font-family: 'FairDisplay';
   color: #B21A4E;
 }
 
-footer div p {
-  font-family: sans-serif;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
+#contact .col .para {
+  font-family: system-ui, system-ui, sans-serif !important;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: rgba(245, 245, 245, 0.694);
 }
 
-footer div p:hover {
+#contact .col .link:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  color: #6F249B;
 }
 /*# sourceMappingURL=styles.css.map */

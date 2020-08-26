@@ -2,6 +2,9 @@ $dominant-color: #201728;
 $light-purple-color: #6F249B;
 $darker-purple-color: #5E2083;
 $pink-red-color: #B21A4E;
+$main-text-color: rgba(245, 245, 245, 0.904);
+$sub-text-color: rgba(245, 245, 245, 0.694);
+
 @font-face {
 	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 	font-family: MontSerrat;
@@ -9,93 +12,6 @@ $pink-red-color: #B21A4E;
 	font-family: FairDisplay;
 }
 
-@media (min-width:801px)  { 
-	/*Laptop and Desktop*/
-	header {
-		section {
-			.arrow-nav {
-				.arrow-down {
-					bottom: 8% !important;
-					right: 50% !important;
-
-					&:hover {
-						bottom: 10% !important;
-					}
-				}
-			}
-		}
-	}
-
-	main {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		width: 101% !important;
-		#info-box {
-			width: 60% !important;
-			transform: translateY(-10%);
-			
-			p {
-				font-size: 48px !important;
-			}
-		}
-
-		.cards {
-			display: flex;
-			flex-flow: row !important;
-			width: 100%;
-
-			.square, .rectangle, .circle {
-				margin: auto;
-				padding: 0 !important;
-				width: 30%;
-				height: auto;
-
-				.card {
-					width: 400px;
-					height: 400px;
-				}
-
-
-			header {
-				font-size: smaller;
-				margin: 1rem;
-			}
-
-			main {
-				font-size: 32px;
-				padding: 1rem;
-				margin: 0 !important;
-			}
-
-			footer {
-				position: absolute;
-				bottom: 1rem ;
-				right: 1rem;
-			}
-			}
-		}
-	}
-
-	footer {
-		display: flex;
-		flex-flow: row !important;
-		justify-content: space-evenly;
-
-		div {
-			span {
-				font-size: larger;
-			}
-
-			p {
-				font-size: smaller;
-			}
-		}
-	}
-
-
-}
 
 
 * {
@@ -103,7 +19,6 @@ $pink-red-color: #B21A4E;
 	margin: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	
 }
 
 html {
@@ -115,11 +30,253 @@ body {
 }
 
 button {
-	font-family: sans-serif;
+	font-family: system-ui, system-ui, sans-serif;
+	outline: none;
+	color: $sub-text-color !important;
 }
 
-header {
-	section {
+@media (min-width:801px)  { 
+	/*Laptop and Desktop*/
+	.header-header {
+		.main-1 {
+			height: 110vh !important;
+
+			.overlay {
+				.closeBtn {
+					top: 1rem !important;
+					right: 2.7rem !important;
+				}
+			}
+
+			.burger {
+				top: 2rem !important;
+				right: 4rem !important;
+			}
+
+			.arrow-nav {
+				.arrow-down {
+					padding: 1rem;
+					bottom: 15% !important;
+					right: 49% !important;
+
+					&:hover {
+						bottom: 18% !important;
+					}
+				}
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 101% !important;
+		position: relative;
+
+		#info-box {
+			width: 60% !important;
+			transform: translateY(-10%);
+			
+			p {
+				font-size: 48px !important;
+			}
+		}
+
+		.cross {
+			position: absolute !important;
+			z-index: 1;
+			top: 15%;
+			left: 12%;
+		}
+
+		
+
+		.sub-1 {
+			padding-top: 20rem;
+
+			.head {
+				display: flex;
+				flex-flow: column;
+				position: absolute;
+				top: 27%;
+				width: 22%;
+				left: 15%;
+				font-size: 72px !important;
+				z-index: 1;
+				font-weight: 500;
+				color: $main-text-color !important;
+			}
+
+			.para {
+				position: absolute;
+				left: 14%;
+				top: 42%;
+				width: 22%;
+				font-weight: initial !important;
+				color: $sub-text-color !important;
+				text-align: start !important;
+				letter-spacing: .2rem !important;
+
+			}
+			.button {
+				position: absolute !important;
+				top: 60% !important;
+				left: 14%;
+				z-index: 1;
+			}
+
+			.hex-img {
+				left: 28% !important;
+				top: 20% !important;
+				height: 490px !important;
+				width: 470px !important;
+			}
+			.img-box {
+				margin-bottom: 4.5rem !important;
+				padding-top: 5rem !important;
+				.main-img {
+					height: 500px;
+					width: 700px;
+					margin-left: 28rem;
+					margin-bottom: 7rem;
+				}
+
+				.waves {
+					height: 121px !important;
+					width: 54px !important;
+					top: 5% !important;
+					right: 16% !important;
+				}
+
+				.arrow-image {
+					position: absolute;
+					bottom: 7%;
+					height: 121px !important;
+					left: 35% !important;
+				}
+			}
+		}
+
+		.sub-2 {
+			.head {
+				position: absolute;
+				top: 17%;
+				right: 22%;
+				font-size: 64px !important;
+				color: $main-text-color !important;
+			}
+
+			.para {
+				position: absolute;
+				top: 25.5%;
+				right: 18%;
+				width: 22%;
+				text-align: initial !important;
+				letter-spacing: 0.25rem !important;
+				font-weight: 100 !important;
+				color: $sub-text-color !important;
+			}
+
+			.circle-img {
+				top: 5% !important;
+				left: 41%;
+				height: 550px !important;
+				width: 520px !important;
+			}
+
+			.button {
+				position: absolute !important;
+				top: 53% !important;
+				right: 26.5%;
+			}
+
+			.img-box {
+				width: fit-content !important;
+				padding-bottom: 7rem !important;
+				padding-top: 10rem !important;
+				.main-img {
+					height: 450px !important;
+					width: 700px !important;
+					margin-bottom: 8rem !important;
+					margin-left: 7rem !important;
+				}
+				.arrow-img-2-2 {
+					bottom: 18% !important;
+					right: 0;
+					height: auto !important;
+					width: auto !important;
+				}
+			}
+			
+		}
+
+		.cards {
+			display: flex;
+			flex-flow: row !important;
+			
+			padding-top: 5rem !important;
+			padding-bottom: 5rem !important;
+			width: 100%;
+			
+			overflow-x: hidden;
+			padding-left: 3rem;
+
+			.square, .rectangle, .circle {
+				width: 30%;
+				height: auto;
+
+				.card {
+					height: 300px;
+				}
+
+
+			.card-head {
+				font-size: larger;
+				margin: 0.5rem;
+			}
+
+			.card-content {
+				font-size: 40px;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				margin: 0 !important;
+				height: auto;
+			}
+
+			.card-foot {
+				position: absolute;
+				bottom: 1rem ;
+				right: 1rem;
+			}
+			}
+		}
+	}
+
+	#contact {
+		display: flex;
+		flex-flow: row !important;
+		justify-content: space-evenly;
+
+		.col {
+			.head {
+				font-size: larger;
+			}
+
+			.para {
+				font-family: system-ui, system-ui, sans-serif;
+				font-size: smaller;
+			}
+		}
+	}
+
+
+}
+
+
+.header-header {
+	.main-1 {
 		background-image: url('../img/hearo-top.jpg');
 		background-size: cover;
 		background-position: center center;
@@ -138,13 +295,13 @@ header {
 			position: fixed;
 			z-index: 7000;
 			top: 0;
-			left: 0;
+			right: 0;
 			background-color: rgb(0,0,0);
 			background-color: rgba(0,0,0, 0.9);
 			overflow-x: hidden;
 			transition: 0.5s;
 
-			a {
+			.nav-item {
 				padding: 8px;
 				text-decoration: none;
 				font-size: 36px;
@@ -159,8 +316,8 @@ header {
 
 			.closeBtn {
 				position: absolute;
-				top: 2rem;
-				left: 2rem;
+				top: 0;
+				right: 2rem;
 				font-size: 60px;
 				}
 
@@ -174,11 +331,11 @@ header {
 		  }
 
 		.burger {
-			font-size: 2.1rem;
+			font-size: 2.5rem;
 			cursor: pointer;
 			position: absolute;
 			top: 1rem;
-			left: 2rem;
+			right: 2rem;
 		}
 
 		.logo {
@@ -202,7 +359,7 @@ header {
 	}
 }
 
-main {
+.content {
 	background-color: $dominant-color;
 	@mixin sub-section{
 		text-align: center;
@@ -215,7 +372,7 @@ main {
 		width: 100%;
 
 
-		header {
+		.head {
 			font-size: 40px;
 			padding: 1rem;
 			margin-top: 1rem;
@@ -227,7 +384,6 @@ main {
 			height: 50px;
 			border: solid 2px $pink-red-color;
 			background: transparent;
-			color: white;
 			text-transform: uppercase;
 			justify-self: center;
 			align-self: center;
@@ -246,7 +402,7 @@ main {
 			}
 		}
 
-		p {
+		.para {
 			z-index: 6000;
 			text-align: center;
 			margin: 1rem;
@@ -274,7 +430,7 @@ main {
 		border-radius: 0.1rem;
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-		p {
+		.para {
 			letter-spacing: .1rem;
 			font-family: "MontSerrat";
 			font-weight: lighter;
@@ -286,6 +442,12 @@ main {
 			align-self: center;
 			margin-bottom: 6rem;
 		}
+	}
+
+	
+	.cross {
+		position: relative;
+		padding-left: 35%;
 	}
 
 	.sub-1 {
@@ -306,7 +468,7 @@ main {
 			margin-bottom: 2rem;
 		}
 
-		div {
+		.img-box {
 			position: relative;
 			padding: 2rem;
 			margin-top: 2rem;
@@ -334,7 +496,7 @@ main {
 	.sub-2 {
 		@include sub-section();
 
-		header {
+		.head {
 			text-align: center;
 			z-index: 1000;
 		}
@@ -352,7 +514,7 @@ main {
 			margin-bottom: 2rem;
 		}
 
-		div {
+		.img-box {
 			position: relative;
 			padding: 2rem;
 			margin-bottom: 2rem;
@@ -383,6 +545,7 @@ main {
 		margin: 0.5rem 1rem;
 		box-shadow: 1px 1px 1.5px 1.5px #130e183f;
 		transition: all 0.7s ease;
+		color: $main-text-color !important;
 
 		
 		&:hover {
@@ -391,7 +554,7 @@ main {
 			cursor: pointer;
 		}
 
-		header {
+		.card-head {
 			margin-left: 1rem;
 			font-family: sans-serif;
 			font-weight: normal;
@@ -399,7 +562,7 @@ main {
 			color: $pink-red-color;
 		}
 
-		main {
+		.card-content {
 			background-color: inherit;
 			margin-top: 3rem;
 			margin-left: 1rem;
@@ -409,7 +572,7 @@ main {
 			font-size: 32px;
 		}
 
-		footer {
+		.card-foot {
 			position: relative;
 			bottom: 0;
 			background: transparent;
@@ -419,7 +582,7 @@ main {
 			margin-right: 1rem;
 			width: fit-content;
 
-			img {
+			.card-arrow-right {
 				transition: all 0.7s ease;
 				overflow: hidden;
 				
@@ -457,7 +620,7 @@ main {
 	
 
 
-footer {
+#contact {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -465,21 +628,24 @@ footer {
 	padding: 3rem;
 	background: $dominant-color;
 
-	div {
+	.col {
 		padding: 1rem;
 
-		span {
+		.head {
 			font-family: 'FairDisplay';
 			color: $pink-red-color;
 		}
 
-		p {
-			font-family: sans-serif;
-			transition: all 0.7s;
+		.para {
+			font-family: system-ui, system-ui, sans-serif !important;
+			transition: all 0.3s;
+			color: $sub-text-color;
+		}
 
+		.link {
 			&:hover {
 				cursor: pointer;
-				transform: scale(1.01);
+				color: $light-purple-color;
 			}
 		}
 	}
