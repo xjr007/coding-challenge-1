@@ -29,13 +29,14 @@ body {
 }
 
 button {
-	font-family: sans-serif;
+	font-family: system-ui, system-ui, sans-serif;
+	outline: none;
 }
 
 @media (min-width:801px)  { 
 	/*Laptop and Desktop*/
-	header {
-		section {
+	.header-header {
+		.main-1 {
 			.arrow-nav {
 				.arrow-down {
 					bottom: 8% !important;
@@ -49,7 +50,7 @@ button {
 		}
 	}
 
-	main {
+	.content {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -75,22 +76,20 @@ button {
 			padding-right: 4rem !important;
 
 			.square, .rectangle, .circle {
-				margin: auto;
 				width: 30%;
 				height: auto;
 
 				.card {
-					width: 300px;
 					height: 300px;
 				}
 
 
-			header {
+			.card-head {
 				font-size: larger;
 				margin: 1rem;
 			}
 
-			main {
+			.card-content {
 				font-size: 32px;
 				padding-left: 1rem;
 				padding-right: 1rem;
@@ -98,7 +97,7 @@ button {
 				height: auto;
 			}
 
-			footer {
+			.card-foot {
 				position: absolute;
 				bottom: 1rem ;
 				right: 1rem;
@@ -107,7 +106,7 @@ button {
 		}
 
 		.sub-2 {
-			header {
+			.head {
 				position: absolute;
 				top: 17%;
 				right: 22%;
@@ -115,7 +114,7 @@ button {
 				color: whitesmoke !important;
 			}
 
-			p {
+			.para {
 				position: absolute;
 				top: 25.5%;
 				right: 18%;
@@ -139,7 +138,7 @@ button {
 				right: 26.5%;
 			}
 
-			div {
+			.img-box {
 				width: fit-content !important;
 				padding-bottom: 7rem !important;
 				padding-top: 10rem !important;
@@ -160,17 +159,18 @@ button {
 		}
 	}
 
-	footer {
+	#contact {
 		display: flex;
 		flex-flow: row !important;
 		justify-content: space-evenly;
 
-		div {
-			span {
+		.col {
+			.head {
 				font-size: larger;
 			}
 
-			p {
+			.para {
+				font-family: system-ui, system-ui, sans-serif;
 				font-size: smaller;
 			}
 		}
@@ -180,8 +180,8 @@ button {
 }
 
 
-header {
-	section {
+.header-header {
+	.main-1 {
 		background-image: url('../img/hearo-top.jpg');
 		background-size: cover;
 		background-position: center center;
@@ -206,7 +206,7 @@ header {
 			overflow-x: hidden;
 			transition: 0.5s;
 
-			a {
+			.nav-item {
 				padding: 8px;
 				text-decoration: none;
 				font-size: 36px;
@@ -264,7 +264,7 @@ header {
 	}
 }
 
-main {
+.content {
 	background-color: $dominant-color;
 	@mixin sub-section{
 		text-align: center;
@@ -277,7 +277,7 @@ main {
 		width: 100%;
 
 
-		header {
+		.head {
 			font-size: 40px;
 			padding: 1rem;
 			margin-top: 1rem;
@@ -308,7 +308,7 @@ main {
 			}
 		}
 
-		p {
+		.para {
 			z-index: 6000;
 			text-align: center;
 			margin: 1rem;
@@ -336,7 +336,7 @@ main {
 		border-radius: 0.1rem;
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-		p {
+		.para {
 			letter-spacing: .1rem;
 			font-family: "MontSerrat";
 			font-weight: lighter;
@@ -368,7 +368,7 @@ main {
 			margin-bottom: 2rem;
 		}
 
-		div {
+		.im {
 			position: relative;
 			padding: 2rem;
 			margin-top: 2rem;
@@ -396,7 +396,7 @@ main {
 	.sub-2 {
 		@include sub-section();
 
-		header {
+		.head {
 			text-align: center;
 			z-index: 1000;
 		}
@@ -414,7 +414,7 @@ main {
 			margin-bottom: 2rem;
 		}
 
-		div {
+		.img-box {
 			position: relative;
 			padding: 2rem;
 			margin-bottom: 2rem;
@@ -453,7 +453,7 @@ main {
 			cursor: pointer;
 		}
 
-		header {
+		.card-head {
 			margin-left: 1rem;
 			font-family: sans-serif;
 			font-weight: normal;
@@ -461,7 +461,7 @@ main {
 			color: $pink-red-color;
 		}
 
-		main {
+		.card-content {
 			background-color: inherit;
 			margin-top: 3rem;
 			margin-left: 1rem;
@@ -471,7 +471,7 @@ main {
 			font-size: 32px;
 		}
 
-		footer {
+		.card-foot {
 			position: relative;
 			bottom: 0;
 			background: transparent;
@@ -481,7 +481,7 @@ main {
 			margin-right: 1rem;
 			width: fit-content;
 
-			img {
+			.card-arrow-right {
 				transition: all 0.7s ease;
 				overflow: hidden;
 				
@@ -519,7 +519,7 @@ main {
 	
 
 
-footer {
+#contact {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -527,21 +527,23 @@ footer {
 	padding: 3rem;
 	background: $dominant-color;
 
-	div {
+	.col {
 		padding: 1rem;
 
-		span {
+		.head {
 			font-family: 'FairDisplay';
 			color: $pink-red-color;
 		}
 
-		p {
-			font-family: sans-serif;
-			transition: all 0.7s;
+		.para {
+			font-family: system-ui, system-ui, sans-serif !important;
+			transition: all 0.3s;
+		}
 
+		.link {
 			&:hover {
 				cursor: pointer;
-				transform: scale(1.01);
+				color: $light-purple-color;
 			}
 		}
 	}
