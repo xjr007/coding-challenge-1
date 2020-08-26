@@ -29,8 +29,13 @@ button {
 
 @media (min-width: 801px) {
   /*Laptop and Desktop*/
+  .header-header {
+    background-color: #201728;
+  }
   .header-header .main-1 {
     height: 110vh !important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%) !important;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%) !important;
   }
   .header-header .main-1 .overlay .closeBtn {
     top: 1rem !important;
@@ -67,8 +72,8 @@ button {
   }
   .content #info-box {
     width: 60% !important;
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
   .content #info-box p {
     font-size: 48px !important;
@@ -142,6 +147,10 @@ button {
     bottom: 7%;
     height: 121px !important;
     left: 35% !important;
+  }
+  .content .sub-2 {
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%) !important;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%) !important;
   }
   .content .sub-2 .head {
     position: absolute;
